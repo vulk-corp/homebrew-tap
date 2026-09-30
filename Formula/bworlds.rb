@@ -17,18 +17,20 @@ class Bworlds < Formula
     end
   end
 
-  # The archive also carries the operator skill, which belongs in a home
-  # directory a package install never writes to; the caveats cover it.
+  # The archive also carries the skills. They stay out of the keg because a
+  # coding agent reads them from a home directory, where the caveats put the
+  # single copy that every agent on the machine shares.
   def install
     bin.install "bworlds"
   end
 
   def caveats
     <<~TEXT
-      A coding agent reads the operator skill from your home directory. Install it once:
+      Give your coding agent the BWORLDS skills:
 
-        mkdir -p ~/.claude/skills/bworlds-operator
-        curl -fsSL https://docs.bworlds.co/bworlds-operator-SKILL.md -o ~/.claude/skills/bworlds-operator/SKILL.md
+        npx skills add https://docs.bworlds.co/bworlds-cli-SKILL.md -g
+        npx skills add https://docs.bworlds.co/bworlds-audit-SKILL.md -g
+        npx skills add https://docs.bworlds.co/bworlds-check-SKILL.md -g
     TEXT
   end
 

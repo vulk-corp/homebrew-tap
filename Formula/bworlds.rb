@@ -1,7 +1,7 @@
 class Bworlds < Formula
   desc "Command-line interface for BWORLDS Builds, Audits and Findings"
   homepage "https://docs.bworlds.co/docs"
-  version "0.1.0-preview.8"
+  version "0.1.0-preview.9"
 
   # macOS is the only verified Homebrew target. Linux and automation install
   # through https://docs.bworlds.co/install.sh.
@@ -9,11 +9,11 @@ class Bworlds < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://docs.bworlds.co/downloads/bworlds/0.1.0-preview.8/bworlds_0.1.0-preview.8_darwin-arm64.tar.gz"
-      sha256 "af04e851cce7851b2cde41383aeaa7927f098a092ece79f68323edc11da78239"
+      url "https://docs.bworlds.co/downloads/bworlds/0.1.0-preview.9/bworlds_0.1.0-preview.9_darwin-arm64.tar.gz"
+      sha256 "eed4ec4e80f3babb72cbe0aeecf73c57aa4a52eb69809c1e1fef622e4cdeec8f"
     else
-      url "https://docs.bworlds.co/downloads/bworlds/0.1.0-preview.8/bworlds_0.1.0-preview.8_darwin-amd64.tar.gz"
-      sha256 "9c55509693bcc8d61d4682e8de1393a31dbbc30ea040a8f08d8e6905331134d2"
+      url "https://docs.bworlds.co/downloads/bworlds/0.1.0-preview.9/bworlds_0.1.0-preview.9_darwin-amd64.tar.gz"
+      sha256 "1c4f15ee5a153a4600ab1a9b969ac3a5c0080e40e00f55721d4ed33f163d6427"
     end
   end
 
